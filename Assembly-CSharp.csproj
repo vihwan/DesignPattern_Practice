@@ -39,6 +39,9 @@
      <Compile Include="Assets\2.Scripts\0_Basic\Example_0.cs" />
      <Compile Include="Assets\2.Scripts\1_Component\Component_Example.cs" />
      <Compile Include="Assets\2.Scripts\1_Component\RotateAction.cs" />
+     <Compile Include="Assets\2.Scripts\2_Singleton\CSingleton.cs" />
+     <Compile Include="Assets\2.Scripts\2_Singleton\InputManager.cs" />
+     <Compile Include="Assets\2.Scripts\2_Singleton\PlayerControls.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/2019.4.30f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
