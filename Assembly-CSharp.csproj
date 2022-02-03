@@ -42,6 +42,7 @@
      <Compile Include="Assets\2.Scripts\2_Singleton\CSingleton.cs" />
      <Compile Include="Assets\2.Scripts\2_Singleton\InputManager.cs" />
      <Compile Include="Assets\2.Scripts\2_Singleton\PlayerControls.cs" />
+     <Compile Include="Assets\2.Scripts\2_Singleton\SingletonUsingLazy.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/2019.4.30f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
