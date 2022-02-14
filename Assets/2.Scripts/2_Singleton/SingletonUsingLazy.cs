@@ -1,18 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingletonUsingLazy : MonoBehaviour
+public class SingletonUsingLazy<T> : MonoBehaviour where T : class
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private static readonly Lazy<T> _instance =
+        new Lazy<T>(() =>
+        {
+            T instance = FindObjectOfType(typeof(T)) as T;
 
-    // Update is called once per frame
-    void Update()
+            if (instance == null)
+            {
+                GameObject obj = new GameObject("GameManagers");
+                instance = obj.AddComponent(typeof(T)) as T;
+
+                DontDestroyOnLoad(obj);
+            }
+
+            return instance;
+        });
+
+    public static T Instance
     {
-        
+        get
+        {
+            return _instance.Value;
+        }
     }
 }
